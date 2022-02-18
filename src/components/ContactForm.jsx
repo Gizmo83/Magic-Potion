@@ -7,14 +7,14 @@ import styled from 'styled-components';
 
 const ContactForm = ({ formValues, handleChange, isInvalid }) => {
   return (
-    <Row>
+    <Wrapper>
       <Col>
         <SectionHeader>
           Contact
         </SectionHeader>
       </Col>
       <RowInputWrapper className='my-3'>
-        <Col>
+        <Col className='px-0'>
           <Form.Control
             isInvalid={isInvalid.email}
             name='email'
@@ -28,7 +28,7 @@ const ContactForm = ({ formValues, handleChange, isInvalid }) => {
           </Form.Control.Feedback>
         </Col>
       </RowInputWrapper>
-    </Row>
+    </Wrapper>
   )
 };
 
@@ -40,6 +40,10 @@ const SectionHeader = styled.p`
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
+`;
+
+const Wrapper = styled(Row)`
+  justify-content: center;
 `;
 
 export default ContactForm;

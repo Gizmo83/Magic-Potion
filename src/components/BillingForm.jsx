@@ -7,14 +7,14 @@ import styled from 'styled-components';
 
 const BillingForm = ({ formValues, handleChange, isInvalid }) => {
   return (
-    <Row>
+    <Wrapper>
       <Col>
         <SectionHeader>
           Billing Information
         </SectionHeader>
       </Col>
       <Row className='my-3' style={{ height: '40px' }}>
-        <Col>
+        <Col className='px-0'>
           <NumberInput
             isInvalid={isInvalid.creditCard}
             name='creditCard'
@@ -29,7 +29,7 @@ const BillingForm = ({ formValues, handleChange, isInvalid }) => {
         </Col>
       </Row>
       <Row className='my-3' style={{ height: '40px' }}>
-        <Col>
+        <Col className='ps-0'>
           <Form.Control
             isInvalid={isInvalid.expirationDate}
             name='expirationDate'
@@ -43,7 +43,7 @@ const BillingForm = ({ formValues, handleChange, isInvalid }) => {
             Please enter a valid expiration mm/yy
           </Form.Control.Feedback>
         </Col>
-        <Col>
+        <Col className='pe-0'>
           <NumberInput
             isInvalid={isInvalid.zipCode}
             name='zipCode'
@@ -58,7 +58,7 @@ const BillingForm = ({ formValues, handleChange, isInvalid }) => {
           </Form.Control.Feedback>
         </Col>
       </Row>
-    </Row>
+    </Wrapper>
   )
 };
 
@@ -74,6 +74,10 @@ const SectionHeader = styled.p`
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
+`;
+
+const Wrapper = styled(Row)`
+  justify-content: center;
 `;
 
 export default BillingForm;

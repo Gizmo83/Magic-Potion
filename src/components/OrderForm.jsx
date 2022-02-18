@@ -7,14 +7,14 @@ import styled from 'styled-components';
 
 const OrderForm = ({ formValues, handleChange, isInvalid }) => {
   return (
-    <Row>
+    <Wrapper>
       <Col>
         <SectionHeader>
           Your Order
         </SectionHeader>
       </Col>
       <RowInputWrapper className='my-3'>
-        <Col className='my-2 my-md-0' sm={12} md={6}>
+        <Col className='my-2 my-md-0 ps-0' sm={12} md={6}>
           <NumberInput
             isInvalid={isInvalid.quantity}
             max={3}
@@ -29,7 +29,7 @@ const OrderForm = ({ formValues, handleChange, isInvalid }) => {
             Please enter a quantity (max 3)
           </Form.Control.Feedback>
         </Col>
-        <Col className='my-2 my-md-0' sm={12} md={6}>
+        <Col className='my-2 my-md-0 pe-0' sm={12} md={6}>
           <ReadOnlyInput
             readOnly
             type='text'
@@ -37,7 +37,7 @@ const OrderForm = ({ formValues, handleChange, isInvalid }) => {
           />
         </Col>
       </RowInputWrapper>
-    </Row>
+    </Wrapper>
   )
 };
 
@@ -66,6 +66,10 @@ const SectionHeader = styled.p`
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
+`;
+
+const Wrapper = styled(Row)`
+  justify-content: center;
 `;
 
 export default OrderForm;
