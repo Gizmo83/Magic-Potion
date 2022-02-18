@@ -170,7 +170,7 @@ const App = () => {
           <Image fluid src={MagicPotionImg} />
         </TopCol>
       </TopRow>
-      <Form>
+      <Form className='px-2 px-md-0'>
         <OrderForm
           formValues={form}
           handleChange={handleChange}
@@ -229,6 +229,9 @@ const TopCol = styled(Col)`
   position: relative;
   text-align: center;
   color: black;
+  @media (max-width: 576px) {
+    padding: 0px;
+  }
 `;
 
 const StyledButton = styled(Button)`
