@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 
-import MagicPotionImg from './assets/Magic potion image.svg';
+import MagicPotionImg from './assets/Magic potion image.jpg';
 import BillingForm from './components/BillingForm';
 import ContactForm from './components/ContactForm';
 import OrderForm from './components/OrderForm';
