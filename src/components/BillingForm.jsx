@@ -29,7 +29,7 @@ const BillingForm = ({ formValues, handleChange, isInvalid }) => {
         </Col>
       </Row>
       <Row className='my-3' style={{ height: '40px' }}>
-        <Col className='ps-0'>
+        <Col className='ps-0 pe-2'>
           <Form.Control
             isInvalid={isInvalid.expirationDate}
             name='expirationDate'
@@ -43,7 +43,7 @@ const BillingForm = ({ formValues, handleChange, isInvalid }) => {
             Please enter a valid expiration mm/yy
           </Form.Control.Feedback>
         </Col>
-        <Col className='pe-0'>
+        <Col className='ps-2 pe-0'>
           <NumberInput
             isInvalid={isInvalid.zipCode}
             name='zipCode'
