@@ -14,7 +14,7 @@ const OrderForm = ({ formValues, handleChange, isInvalid }) => {
         </SectionHeader>
       </Col>
       <RowInputWrapper className='my-3'>
-        <Col className='my-2 my-md-0 ps-0' sm={12} md={6}>
+        <Col className='my-2 my-md-0 ps-0 pe-0 pe-sm-2' sm={12} md={6}>
           <NumberInput
             isInvalid={isInvalid.quantity}
             max={3}
@@ -29,7 +29,7 @@ const OrderForm = ({ formValues, handleChange, isInvalid }) => {
             Please enter a quantity (max 3)
           </Form.Control.Feedback>
         </Col>
-        <Col className='my-2 my-md-0 pe-0' sm={12} md={6}>
+        <Col className='my-2 my-md-0 pe-0 ps-0 ps-sm-2' sm={12} md={6}>
           <ReadOnlyInput
             readOnly
             type='text'
