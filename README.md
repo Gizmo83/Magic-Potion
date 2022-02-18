@@ -35,3 +35,8 @@ To run test suite:
   * should respond with status code 422 if e-mail matches an existing record
     * test email: user@email.com
 * Had some issues targeting elements for tests and had to mostly use `getByPlaceholderText`
+* Test coverage:
+  * Checks if form submits when all fields are valid
+  * Checks form will not submit when fields are invalid
+  * Checks form will not submit when field is empty
+  * Checks if input messages are visible when inputs are invalid

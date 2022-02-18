@@ -25,7 +25,7 @@ describe('App', () => {
     expect(spyPostForm).toHaveBeenCalledTimes(1);
   });
 
-  test('Should not submit form when not all input fields are filled in', () => {
+  test('Should not submit form when an input field is empty', () => {
     const quantity = '1';
     const email = 'test@test.com';
     const cc = '1234123412341234';
